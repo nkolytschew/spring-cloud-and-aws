@@ -1,0 +1,13 @@
+
+<div class="container">
+  <h1>Greeting</h1>
+  <button (click)="doStuff()">click me hard!</button>
+
+  <div *ngIf="authenticated">
+    <p>The ID is {{greeting.id}}</p>
+    <p>The content is {{greeting.content}}</p>
+  </div>
+  <div *ngIf="!authenticated">
+    <p>Login to see your greeting</p>
+  </div>
+</div>
