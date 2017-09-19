@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   }
 
   doStuff(): void {
-    const uri = "/resource";
+    const uri = "/api/resource";
     this.http
       .get(uri, this.apiService.getHeaders())
       .map((res: Response) => {
