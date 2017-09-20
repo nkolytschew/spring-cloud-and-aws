@@ -28,7 +28,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		// @formatter:off
 		http
 				.authorizeRequests()
-					.antMatchers("/index.html", "/").permitAll()
+					.antMatchers("/index.html", "/home", "/").permitAll()
 					.anyRequest().authenticated()
 				.and()
 					.csrf()

@@ -1,4 +1,3 @@
-
 <div class="container">
   <h1>Greeting</h1>
   <button (click)="doStuff()">click me hard!</button>
@@ -6,6 +5,14 @@
   <div *ngIf="authenticated">
     <p>The ID is {{greeting.id}}</p>
     <p>The content is {{greeting.content}}</p>
+
+
+    <p>
+      also, there is new content from another service:
+      <span>{{hello}}</span>
+      <span>{{hellos | json}}</span>
+      <span>{{something}}</span>
+    </p>
   </div>
   <div *ngIf="!authenticated">
     <p>Login to see your greeting</p>

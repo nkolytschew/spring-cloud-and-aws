@@ -17,7 +17,12 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.doStuff();
   }
+
+  hello;
+  hellos;
+  something;
 
   doStuff(): void {
     const uri = "/api/resource";
@@ -37,6 +42,25 @@ export class HomeComponent implements OnInit {
           console.log("error: " + error);
           this.authenticated = false;
         });
+
+    const hello = "v1/api/hello";
+    this.http.get(hello)
+      .subscribe(
+        data => this.hello = data.json(),
+        error => console.log("error: " + error));
+
+    const hellos = "v1/api/hellos";
+    this.http.get(hellos)
+      .subscribe(
+        data => this.hellos = data.json(),
+        error => console.log("error: " + error));
+
+    const something = "v1/api/something/blablabla";
+    this.http.get(something)
+      .subscribe(
+        data => this.something = data.json(),
+        error => console.log("error: " + error));
+
   }
 
 }

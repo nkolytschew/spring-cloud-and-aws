@@ -26,7 +26,7 @@ import {ApiService} from "./services/api.service";
       [
         {path: 'login', component: LoginComponent},
         {path: 'home', component: HomeComponent},
-        {path: '', component: HomeComponent}
+        {path: '', pathMatch: 'full', redirectTo: '/home'}
       ]
     )
   ],
